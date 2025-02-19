@@ -257,8 +257,8 @@ async def get_readable_message(sid, is_user, page_no=1, status="All", page_step=
         # TODO: Add Bt Sel
         msg += f"\n┠<b>User: {task.listener.message.from_user.mention(style='html')}</b> | <b>ID:</b> <code>{task.listener.message.from_user.id}</code>"
         # Added Bt Sel(Copy Paste Needed)
-        if (task.engine()).startswith("qBit"):
-            msg+= f"<b>┠ Btsel:</b> <code>/{BotCommands.SelectCommand[1]} {task.gid()}</code>"
+        # if (task.engine()).startswith("qBit"):
+        #     msg+= f"<b>┠ Btsel:</b> <code>/{BotCommands.SelectCommand[1]} {task.gid()}</code>"
         msg += f"\n<b>┖ Cancel:</b> /{BotCommands.CancelTaskCommand[1]}_{task.gid()}\n\n"
 
     if len(msg) == 0:
